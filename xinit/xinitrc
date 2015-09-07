@@ -1,0 +1,3 @@
+#!/bin/sh
+xset m 1/1 4;
+exec xfce4-session

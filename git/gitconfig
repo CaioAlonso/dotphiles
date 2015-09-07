@@ -5,12 +5,12 @@
 #
 # Authors:
 #   Ben O'Hara <bohara@gmail.com>
-#
+#   Caio Alonso <caio@caioalonso.com>
 
 # Global Config
 [user]
-    #name = "**Your Name**"
-    #email = "**Your Email**"
+    name = "Caio Alonso"
+    email = "caio@caioalonso.com"
     #signingkey = **Your GPG ID**
 
 [branch "master"]
@@ -145,4 +145,3 @@
 
 [url "git@github.com:"]
     insteadof = github:
-
