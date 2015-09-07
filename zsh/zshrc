@@ -50,7 +50,7 @@ plugins=(git rails ruby archlinux cp tmux z github gitignore themes systemd
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/share/java/gradle/bin:/opt/opencascade/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/caio/bin:/home/caio/.gem/ruby/1.9.1/bin:/home/caio/gocode/bin"
+export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/share/java/gradle/bin:/opt/opencascade/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/caio/bin:/home/caio/.gem/ruby/1.9.1/bin:/home/caio/gocode/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -111,8 +111,6 @@ export PATH="$PATH:/home/caio/.stack/programs/x86_64-linux/ghc-7.8.4/bin/"
 export PATH="$PATH:/home/caio/.local/bin/"
 export PATH="$PATH:/home/caio/.gem/ruby/2.2.0/bin"
 export PATH="$HOME/.rbenv/bin:$PATH"
-source /home/caio/.tmuxification/contatolentes.tmux
-source /home/caio/.tmuxification/hermitex_institucional.tmux
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk
 
 alias msfconsole="msfconsole --quiet -x \"db_connect root@msf\""
