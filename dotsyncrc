@@ -43,6 +43,7 @@ git/gitconfig
 #mysql/my.cnf
 #ncmpcpp/config
 #ncmpcpp/error.log
+oh-my-zsh
 #postgresql/psqlrc
 #python/pythonrc
 #python/pylintrc
@@ -70,11 +71,11 @@ git/gitconfig
 xinit/xinitrc
 #zsh/fasdrc
 #zsh/dotzsh:.zsh
-#zsh/zlogin
+zsh/zlogin
 #zsh/zlogout
 #zsh/zprofile
 #zsh/zshenv
-#zsh/zshrc
+zsh/zshrc
 [endfiles]
 
 # Hosts to sync
