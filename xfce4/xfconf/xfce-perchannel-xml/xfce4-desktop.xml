@@ -17,7 +17,7 @@
         <property name="image-show" type="bool" value="true"/>
         <property name="last-image" type="string" value="/home/caio/.wallpaper/painting.jpg"/>
         <property name="last-single-image" type="string" value="/home/caio/.wallpaper/painting.jpg"/>
-        <property name="image-style" type="int" value="1"/>
+        <property name="image-style" type="int" value="0"/>
       </property>
       <property name="monitor1" type="empty">
         <property name="image-path" type="string" value="/home/caio/.wallpaper/painting.jpg"/>
