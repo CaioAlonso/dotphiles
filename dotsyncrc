@@ -70,7 +70,7 @@ oh-my-zsh
 #vim/gvimrc
 #wget/wgetrc
 xinit/xinitrc
-xfce4/terminal/terminalrc:.config/xfce4/terminal/terminalrc
+xfce4/terminal:.config/xfce4/terminal
 #zsh/fasdrc
 #zsh/dotzsh:.zsh
 zsh/zlogin
@@ -86,6 +86,7 @@ zsh/zshrc
 arch                             git=ANY
 desktop                          git=ANY
 debian                           git=ANY
+netbook                          git=ANY
 #host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile
 #host2.example.com               git=ANY                                                #git repo, pull from anywhere
 #host3.example.com               git=ANY                                                #git repo, pull from anywhere
