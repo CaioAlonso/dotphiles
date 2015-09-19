@@ -69,8 +69,10 @@ oh-my-zsh
 #vim/vimrc
 #vim/gvimrc
 #wget/wgetrc
+wallpaper:.wallpaper
 xinit/xinitrc
 xfce4/terminal:.config/xfce4/terminal
+xfce4/xfconf:.config/xfce4/xfconf
 #zsh/fasdrc
 #zsh/dotzsh:.zsh
 zsh/zlogin
