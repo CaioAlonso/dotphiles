@@ -1,3 +1,12 @@
 #!/bin/sh
 xset m 1/1 4;
-exec xfce4-session
+
+while true; do
+    DWM_CLOCK=$( date '+%e %b %a %k:%M' );
+    xsetroot -name "$DWM_CLOCK";
+    sleep 1m;
+done &
+
+bgs ~/.wallpaper/calmness.png &
+
+exec dwm

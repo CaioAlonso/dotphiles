@@ -106,12 +106,20 @@ alias gm='git merge'
 
 # Go
 export GOPATH=~/gocode
+export GOROOT=$HOME/go
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$PATH:/home/caio/.stack/programs/x86_64-linux/ghc-7.8.4/bin/"
 export PATH="$PATH:/home/caio/.local/bin/"
+export PATH="$PATH:/home/caio/bin/"
 export PATH="$PATH:/home/caio/.gem/ruby/2.2.0/bin"
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$PATH:/usr/games"
+export PATH="$PATH:/home/caio/bin/retroarch"
+export PATH="$PATH:/home/caio/.cabal/bin"
+export PATH="$PATH:/usr/local/musl/bin"
+export PATH="/home/caio/bin/firefox/:$PATH"
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk
 
 alias msfconsole="msfconsole --quiet -x \"db_connect root@msf\""
 eval "$(rbenv init -)"
+
+source /home/caio/bin/byond/bin/byondsetup
