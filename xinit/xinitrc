@@ -1,6 +1,4 @@
 #!/bin/sh
-xset m 1/1 4;
-
 while true; do
     DWM_CLOCK=$( date '+%e %b %a %k:%M' );
     xsetroot -name "$DWM_CLOCK";
@@ -8,5 +6,7 @@ while true; do
 done &
 
 bgs ~/.wallpaper/calmness.png &
+xrdb ~/.Xresources &
+redshift &
 
-exec dwm
+exec awesome
