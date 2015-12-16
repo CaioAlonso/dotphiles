@@ -1,5 +1,5 @@
 [Configuration]
-FontName=Terminus 12
+FontName=Source Code Pro 10
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBordersDefault=TRUE
@@ -35,8 +35,5 @@ ColorPalette14=#6c6c7171c4c4
 ColorPalette15=#9393a1a1a1a1
 ColorPalette16=#fdfdf6f6e3e3
 Term=xterm-color
-ColorForeground=#dcdcdc
-ColorBackground=#2c2c2c
-ColorCursor=#dcdcdc
-ColorPalette=#3f3f3f3f3f3f;#8e876d576d57;#6060b4b48a8a;#dfdfafaf8f8f;#9a9ab8b8d7d7;#dcdc8c8cc3c3;#8c8cd0d0d3d3;#dcdcdcdcdcdc;#707090908080;#dcdca3a3a3a3;#7272d5d5a3a3;#f0f0dfdfafaf;#9494bfbff3f3;#ecec9393d3d3;#9393e0e0e3e3;#ffffffffffff
+ColorPalette=#000000000000;#aaaa00000000;#0000aaaa0000;#aaaa55550000;#0000aaaa0d5b;#aaaa0000aaaa;#0000aaaa0153;#aaaaaaaaaaaa;#555555555555;#ffff55555555;#5555ffff5555;#ffffffff5555;#5555ffff6187;#ffff5555ffff;#5555ffffffff;#ffffffffffff
 
