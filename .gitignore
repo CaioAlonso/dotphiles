@@ -35,3 +35,4 @@ mutt/mailboxes.*
 mutt/smime/*
 mutt/certificates
 task/task/*.data
+fish/fish_history
