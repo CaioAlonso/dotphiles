@@ -45,6 +45,9 @@ hexchat:.config/hexchat
 #ncmpcpp/config
 #ncmpcpp/error.log
 oh-my-zsh
+oh-my-fish:.local/share/omf
+omf:.config/omf
+fish:.config/fish
 #postgresql/psqlrc
 #python/pythonrc
 #python/pylintrc
