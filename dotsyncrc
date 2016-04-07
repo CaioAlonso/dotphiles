@@ -44,6 +44,7 @@ hexchat:.config/hexchat
 #mysql/my.cnf
 #ncmpcpp/config
 #ncmpcpp/error.log
+nvim:.config/nvim
 oh-my-zsh
 oh-my-fish:.local/share/omf
 omf:.config/omf
