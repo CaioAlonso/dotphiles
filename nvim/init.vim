@@ -53,8 +53,6 @@ au FileType haskell nnoremap <buffer> <silent> <F4> :HdevtoolsInfo<CR>
 let g:syntastic_auto_loc_list=1
 let g:syntastic_haskell_checkers = ["hdevtools", "hlint"]
 let g:syntastic_javascript_checkers = ["jshint"]
-source ~/.vim/hindent.vim
-let g:hindent_style="johan-tibell"
 let g:ctrlp_extensions = ['tag']
 
 " search the whole project easily
