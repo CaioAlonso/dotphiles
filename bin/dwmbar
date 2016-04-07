@@ -1,0 +1,32 @@
+#!/bin/sh
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later
+# version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+# details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program. If not, see http://www.gnu.org/licenses/.
+#
+# Copyright (C) Caio Alonso, 2016
+
+DWM_CHARGING=$(acpi --battery | grep -i 'discharging')
+
+# if it is not discharging, it must be charging
+if [ -z "$DWM_CHARGING" -a "$DWM_CHARGING" != " " ]
+then
+    DWM_CHARGING="^"
+else
+    DWM_CHARGING=""
+fi
+
+DWM_BAT_LEVEL=$(acpi --battery | awk '{print $4}' | tr --delete ',')
+DWM_VOL=$(amixer -c0 sget Master | awk -vORS=' ' '/Mono:/ {print($6" "$4)}' | tr --delete '[]' | sed -e 's/[[:space:]]*$//')
+DWM_CLOCK=$(date +"%d/%m/%y (%a) %R")
+
+DWM_STATUS="vol $DWM_VOL · $DWM_CHARGING$DWM_BAT_LEVEL · $DWM_CLOCK"
+xsetroot -name "$DWM_STATUS";
