@@ -20,7 +20,7 @@ DOTFILES=.dotfiles
 dotsyncrc
 #ack/ackrc
 #aptitude
-#bin:bin
+bin:bin
 #ctags/ctags
 #cmus
 #curl/curlrc
@@ -88,7 +88,7 @@ zsh/zshrc
 [hosts]
 arch                             git=ANY
 desktop                          git=ANY
-debian                           git=ANY
+notebook                         git=ANY
 netbook                          git=ANY
 #host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile
 #host2.example.com               git=ANY                                                #git repo, pull from anywhere
