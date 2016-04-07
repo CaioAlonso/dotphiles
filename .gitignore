@@ -34,5 +34,6 @@ mutt/cache/*
 mutt/mailboxes.*
 mutt/smime/*
 mutt/certificates
+nvim/plugged
 task/task/*.data
 fish/fish_history
