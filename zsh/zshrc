@@ -108,8 +108,8 @@ alias gp='git pull'
 alias push='git push'
 alias gr='git rebase'
 alias gm='git merge'
+alias t='todo.sh'
 
-# Go
 unset GOROOT
 export GOPATH=$HOME/gocode
 export PATH=$PATH:$GOPATH/bin
