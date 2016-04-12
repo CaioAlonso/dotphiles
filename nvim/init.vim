@@ -156,6 +156,4 @@ inoremap <C-U> <C-G>u<C-U>
 
 " vim:set ft=vim et sw=2:
 " end vim-sensible
-syntax off
-autocmd! BufWritePost * Neomake!
 set wildignore+=*/node_modules/*,*/deps/*
