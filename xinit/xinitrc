@@ -1,9 +1,6 @@
 #!/bin/sh
 while true; do
-    DWM_VOL=$( amixer -c0 sget Master | awk -vORS=' ' '/Mono:/ {print($6$4)}' );
-    DWM_CLOCK=$( date +"%d/%m/%y (%a) %R" )
-    DWM_STATUS="Vol: $DWM_VOL | $DWM_CLOCK"
-    xsetroot -name "$DWM_STATUS";
+    dwmbar
     sleep 10s
 done &
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
@@ -11,4 +8,5 @@ xrdb ~/.Xresources &
 xset r rate 200
 bgs ~/.wallpaper/painting.png
 clipmenud &
+export _JAVA_AWT_WM_NONREPARENTING=1
 exec dwm
