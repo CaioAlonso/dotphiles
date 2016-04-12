@@ -28,5 +28,5 @@ DWM_BAT_LEVEL=$(acpi --battery | awk '{print $4}' | tr --delete ',')
 DWM_VOL=$(amixer -c0 sget Master | awk -vORS=' ' '/Mono:/ {print($6" "$4)}' | tr --delete '[]' | sed -e 's/[[:space:]]*$//')
 DWM_CLOCK=$(date +"%d/%m/%y (%a) %R")
 
-DWM_STATUS="vol $DWM_VOL · $DWM_CHARGING$DWM_BAT_LEVEL · $DWM_CLOCK"
+DWM_STATUS="vol $DWM_VOL · $DWM_CLOCK"
 xsetroot -name "$DWM_STATUS";
