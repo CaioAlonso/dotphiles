@@ -3,6 +3,7 @@ filetype off                  " required
 
 call plug#begin()
 "Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
 Plug 'VundleVim/Vundle.vim'
 Plug 'Shougo/vimproc.vim'
 Plug 'Shougo/neocomplcache.vim'
@@ -15,6 +16,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'rking/ag.vim'
 Plug 'kassio/neoterm'
 Plug 'benekastah/neomake'
+Plug 'mattn/emmet-vim'
+Plug 'junegunn/goyo.vim'
 
 " haskell
 "Plug 'neovimhaskell/haskell-vim'
