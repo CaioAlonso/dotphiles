@@ -14,19 +14,29 @@
 #
 # Copyright (C) Caio Alonso, 2016
 
-DWM_CHARGING=$(acpi --battery | grep -i 'discharging')
+if hash acpi 2>/dev/null; then
+    battery=$(acpi --battery | grep -i 'discharging')
 
-# if it is not discharging, it must be charging
-if [ -z "$DWM_CHARGING" -a "$DWM_CHARGING" != " " ]
-then
-    DWM_CHARGING="^"
+    # if it is not discharging, it must be charging
+    if [ -z "$battery" -a "$battery" != " " ]
+    then
+        battery="^"
+    else
+        battery=""
+    fi
+
+    battery="· $battery$(acpi --battery | awk '{print $4}' | tr --delete ',')"
 else
-    DWM_CHARGING=""
+    battery=""
 fi
 
-DWM_BAT_LEVEL=$(acpi --battery | awk '{print $4}' | tr --delete ',')
-DWM_VOL=$(amixer -c0 sget Master | awk -vORS=' ' '/Mono:/ {print($6" "$4)}' | tr --delete '[]' | sed -e 's/[[:space:]]*$//')
-DWM_CLOCK=$(date +"%d/%m/%y (%a) %R")
+vol=$(amixer get Master |\
+    grep -m 1 % |\
+    awk '{print($6" "$5)}' |\
+    tr --delete '[]' |\
+    sed -e 's/[[:space:]]*$//')
 
-DWM_STATUS="vol $DWM_VOL · $DWM_CLOCK"
-xsetroot -name "$DWM_STATUS";
+clock=$(date +"%d/%m/%y (%a) %R")
+
+status="vol $vol $battery · $clock"
+xsetroot -name "$status";
