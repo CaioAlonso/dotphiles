@@ -38,6 +38,7 @@ hexchat:.config/hexchat
 #mpd/mpd.conf
 #mercurial/hgrc
 #mercurial/hgignore
+mksh/mkshrc
 #mutt
 #mutt/muttrc
 #mutt/offlineimaprc
