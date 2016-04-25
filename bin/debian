@@ -1,0 +1,15 @@
+#!/bin/bash
+SPICE_PORT=5924
+QEMU_AUDIO_DRV=alsa
+qemu-system-x86_64 \
+-drive file=/media/Coisas/Virtualbox/debian.qcow,index=0,media=disk,if=virtio \
+-cpu host \
+-vga qxl \
+-m 1G \
+-enable-kvm \
+-usbdevice tablet \
+-soundhw hda \
+-spice port=${SPICE_PORT},disable-ticketing \
+-daemonize \
+-boot order=d
+exec spicy --title Debian 127.0.0.1 -p ${SPICE_PORT}
