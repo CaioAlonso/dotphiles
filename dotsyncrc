@@ -34,7 +34,6 @@ git/gitconfig
 #input/editrc
 #input/inputrc
 #irssi
-hexchat:.config/hexchat
 #mpd/mpd.conf
 #mercurial/hgrc
 #mercurial/hgignore
