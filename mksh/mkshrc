@@ -1,2 +1,7 @@
 PS1=$'\E[37;1m$(logname)\E[0m@$(hostname -s) \E[37;1m$PWD \n\E[32m$ \E[0m'
 alias ls='ls --color -F'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gd='git diff'
