@@ -14,14 +14,11 @@
 #
 # Copyright (C) Caio Alonso, 2016
 
-if [ $1 == "toggle" ]
-then
+if [ "$1" = "toggle" ]; then
     amixer -D pulse set Master 1+ toggle
-elif [ $1 == "increase" ]
-then
+elif [ "$1" = "increase" ]; then
     amixer set Master 5%+
-elif [ $1 == "decrease" ]
-then
+elif [ "$1" = "decrease" ]; then
     amixer set Master 5%-
 fi
 
