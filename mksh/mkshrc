@@ -1,5 +1,10 @@
 PS1=$'\E[37;1m$USER\E[0m@$(hostname -s) \E[37;1m$PWD \n\E[32m$ \E[0m'
+
 PATH=~/bin:$PATH
+PATH=$PATH:/usr/local/go/bin
+GOPATH=$HOME/gocode
+PATH=$PATH:$GOPATH/bin
+
 alias ls='ls --color -F'
 alias gs='git status'
 alias ga='git add'
