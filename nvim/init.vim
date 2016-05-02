@@ -2,31 +2,59 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 call plug#begin()
-"Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sensible'
+" sensible.vim: Defaults everyone can agree on
 Plug 'tpope/vim-fugitive'
-Plug 'VundleVim/Vundle.vim'
+" fugitive.vim: a Git wrapper so awesome, it should be illegal 
 Plug 'Shougo/vimproc.vim'
+" Interactive command execution in Vim
 Plug 'Shougo/neocomplcache.vim'
-Plug 'scrooloose/syntastic'
+" Ultimate auto-completion system for Vim
+"Plug 'scrooloose/syntastic'
+" Syntax checking hacks for vim
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'bling/vim-airline'
+" Fuzzy file, buffer, mru, tag, etc finder
+Plug 'vim-airline/vim-airline'
+" lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline-themes'
+" A collection of themes for vim-airline
 Plug 'Yggdroot/indentLine'
+" A vim plugin to display the indention levels with thin vertical lines
 Plug 'tpope/vim-unimpaired'
+" pairs of handy bracket mappings
 Plug 'rking/ag.vim'
+" Vim plugin for the_silver_searcher, 'ag', a replacement
+" for the Perl module / CLI script 'ack'
 Plug 'kassio/neoterm'
+" Wrapper of some neovim's :terminal functions.
 Plug 'benekastah/neomake'
+" A plugin for asynchronous :make using Neovim's job-control functionality
 Plug 'mattn/emmet-vim'
+" emmet for vim: http://emmet.io/
 Plug 'junegunn/goyo.vim'
+" Distraction-free writing in Vim
+Plug 'altercation/vim-colors-solarized'
+" precision colorscheme for the vim text editor
 
 " haskell
-"Plug 'neovimhaskell/haskell-vim'
-"Plug 'eagletmt/neco-ghc'
-"Plug 'eagletmt/ghcmod-vim'
-"Plug 'bitc/vim-hdevtools'
-"Plug 'lukerandall/haskellmode-vim'
-"Plug 'nbouscal/vim-stylish-haskell'
+Plug 'neovimhaskell/haskell-vim'
+" Syntax Highlighting and Indentation for Haskell and Cabal
+Plug 'eagletmt/neco-ghc'
+" a completion plugin for Haskell, using ghc-mod
+Plug 'eagletmt/ghcmod-vim'
+" Happy Haskell programming on Vim, powered by ghc-mod
+Plug 'bitc/vim-hdevtools'
+" Vim plugin for Haskell development powered by the lightnight fast hdevtools background server.
+Plug 'lukerandall/haskellmode-vim'
+Plug 'nbouscal/vim-stylish-haskell'
+" Haskell code prettifier
 "Plug 'enomsg/vim-haskellConcealPlus'
+" extended Haskell Conceal feature for Vim
+
+" rust
+Plug 'rust-lang/rust.vim'
+" This is a vim plugin that provides Rust file detection, syntax highlighting,
+" and (optional) autoformatting.
 call plug#end()
 
 filetype plugin indent on    " required
@@ -57,6 +85,8 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_haskell_checkers = ["hdevtools", "hlint"]
 let g:syntastic_javascript_checkers = ["jshint"]
 let g:ctrlp_extensions = ['tag']
+let g:airline_theme='solarized'
+let g:airline_powerline_fonts=1
 
 " search the whole project easily
 nnoremap <Leader>/ :Ag ''<Left>
@@ -160,3 +190,13 @@ inoremap <C-U> <C-G>u<C-U>
 " vim:set ft=vim et sw=2:
 " end vim-sensible
 set wildignore+=*/node_modules/*,*/deps/*
+
+" solarized
+syntax enable
+set background=dark
+colorscheme solarized
+
+" run neomake on every write
+autocmd! BufWritePost * Neomake
+" neomake window
+let g:neomake_open_list = 1
