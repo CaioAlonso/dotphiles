@@ -28,12 +28,12 @@ gnupg/sshcontrol
 gnupg/random*
 gnupg/private*
 gnupg/*~
-hexchat/scrollback
 mercurial/certs/
 mutt/cache/*
 mutt/mailboxes.*
 mutt/smime/*
 mutt/certificates
 nvim/plugged
+nvim/.netrwhist
 task/task/*.data
 fish/fish_history
