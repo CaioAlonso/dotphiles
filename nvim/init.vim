@@ -2,6 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 call plug#begin()
+Plug 'dbeniamine/vim-mail'
 Plug 'tpope/vim-sensible'
 " sensible.vim: Defaults everyone can agree on
 Plug 'tpope/vim-fugitive'
@@ -27,7 +28,7 @@ Plug 'rking/ag.vim'
 " for the Perl module / CLI script 'ack'
 Plug 'kassio/neoterm'
 " Wrapper of some neovim's :terminal functions.
-Plug 'benekastah/neomake'
+"Plug 'benekastah/neomake'
 " A plugin for asynchronous :make using Neovim's job-control functionality
 Plug 'mattn/emmet-vim'
 " emmet for vim: http://emmet.io/
@@ -51,10 +52,9 @@ Plug 'nbouscal/vim-stylish-haskell'
 "Plug 'enomsg/vim-haskellConcealPlus'
 " extended Haskell Conceal feature for Vim
 
-" rust
-Plug 'rust-lang/rust.vim'
-" This is a vim plugin that provides Rust file detection, syntax highlighting,
-" and (optional) autoformatting.
+" javascript
+Plug 'pangloss/vim-javascript'
+
 call plug#end()
 
 filetype plugin indent on    " required
@@ -85,8 +85,8 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_haskell_checkers = ["hdevtools", "hlint"]
 let g:syntastic_javascript_checkers = ["jshint"]
 let g:ctrlp_extensions = ['tag']
-let g:airline_theme='solarized'
-let g:airline_powerline_fonts=1
+"let g:airline_theme='solarized'
+"let g:airline_powerline_fonts=1
 
 " search the whole project easily
 nnoremap <Leader>/ :Ag ''<Left>
@@ -192,11 +192,13 @@ inoremap <C-U> <C-G>u<C-U>
 set wildignore+=*/node_modules/*,*/deps/*
 
 " solarized
-syntax enable
+syntax on
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 " run neomake on every write
-autocmd! BufWritePost * Neomake
+"autocmd! BufWritePost * Neomake
 " neomake window
-let g:neomake_open_list = 1
+"let g:neomake_open_list = 1
+
+set relativenumber
