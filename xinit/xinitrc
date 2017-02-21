@@ -3,10 +3,17 @@ while true; do
     dwmbar
     sleep 10s
 done &
-source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
-xrdb ~/.Xresources &
-xset r rate 200
-bgs ~/.wallpaper/firewatch.png
-clipmenud &
+#source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+xrdb -merge ~/.Xresources &
+xset r rate 200 20
+xinput --set-prop 9 272 -0.9
+
+RANDOM_WALLPAPER="$(ls -d1 ~/.wallpaper/*.jpg ~/.wallpaper/*.png | shuf -n1)"
+echo $RANDOM_WALLPAPER
+rm /tmp/tempwall.jpg
+convert "$RANDOM_WALLPAPER" -resize "1440x900^" -gravity center -crop 1440x900+0+0 +repage /tmp/tempwall.jpg
+bgs /tmp/tempwall.jpg
+
 export _JAVA_AWT_WM_NONREPARENTING=1
+redshift &
 exec dwm
