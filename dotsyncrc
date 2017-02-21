@@ -24,6 +24,8 @@ bin:bin
 #ctags/ctags
 #cmus
 #curl/curlrc
+fontconfig:.config/fontconfig
+fonts
 git/gitconfig
 #git/gitignore
 #git/gitattributes
@@ -45,10 +47,10 @@ mksh/mkshrc
 #ncmpcpp/config
 #ncmpcpp/error.log
 nvim:.config/nvim
-oh-my-zsh
-oh-my-fish:.local/share/omf
-omf:.config/omf
-fish:.config/fish
+#oh-my-zsh
+#oh-my-fish:.local/share/omf
+#omf:.config/omf
+#fish:.config/fish
 #postgresql/psqlrc
 #python/pythonrc
 #python/pylintrc
@@ -77,11 +79,11 @@ wallpaper:.wallpaper
 xinit/xinitrc
 #zsh/fasdrc
 #zsh/dotzsh:.zsh
-zsh/zlogin
+#zsh/zlogin
 #zsh/zlogout
 #zsh/zprofile
 #zsh/zshenv
-zsh/zshrc
+#zsh/zshrc
 [endfiles]
 
 # Hosts to sync
