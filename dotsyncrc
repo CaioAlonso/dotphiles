@@ -69,7 +69,7 @@ nvim:.config/nvim
 #subversion
 #task/task
 #task/taskrc
-#tmux/tmux.conf
+tmux/tmux.conf
 #tmux/tmuxinator
 #vim/dotvim:.vim
 #vim/vimrc
