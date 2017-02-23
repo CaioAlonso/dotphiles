@@ -18,69 +18,22 @@ DOTFILES=.dotfiles
 [files]
 # Uncomment examples below
 dotsyncrc
-#ack/ackrc
-#aptitude
 bin:bin
-#ctags/ctags
-#cmus
-#curl/curlrc
 fontconfig:.config/fontconfig
 fonts
 git/gitconfig
 mksh/mkshrc
-#mutt
-#mutt/muttrc
-#mutt/offlineimaprc
-#mysql/my.cnf
-#ncmpcpp/config
-#ncmpcpp/error.log
 nvim:.config/nvim
-#oh-my-zsh
-#oh-my-fish:.local/share/omf
-#omf:.config/omf
-#fish:.config/fish
-#postgresql/psqlrc
-#python/pythonrc
-#python/pylintrc
-#rpm/rpmmacros
-#ruby/irbrc
-#ruby/pryrc
-#ruby/gemrc
-#ruby/railsrc
-#ruby/rdebugrc
-#ruby/aprc
-#ruby/caprc
-#screen/screenrc
-#shell/hushlogin
-#shell/urlview
-#ssh
-#subversion
-#task/task
-#task/taskrc
 tmux/tmux.conf
-#tmux/tmuxinator
-#vim/dotvim:.vim
-#vim/vimrc
-#vim/gvimrc
-#wget/wgetrc
 wallpaper:.wallpaper
 xinit/xinitrc
-#zsh/fasdrc
-#zsh/dotzsh:.zsh
-#zsh/zlogin
-#zsh/zlogout
-#zsh/zprofile
-#zsh/zshenv
-#zsh/zshrc
 [endfiles]
 
 # Hosts to sync
 ## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
 [hosts]
-arch                             git=ANY
 desktop                          git=ANY
 notebook                         git=ANY
-netbook                          git=ANY
 #host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile
 #host2.example.com               git=ANY                                                #git repo, pull from anywhere
 #host3.example.com               git=ANY                                                #git repo, pull from anywhere
