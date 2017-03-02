@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if url=$(xclip -o | grep --only-matching --perl-regexp "http(s?):\/\/[^ \"\(\)\<\>\]]*")
+then
+    mpv --ytdl --ytdl-format="best[height<900]" $url
+fi
