@@ -11,7 +11,7 @@ Plug 'Shougo/vimproc.vim'
 " Interactive command execution in Vim
 Plug 'Shougo/neocomplcache.vim'
 " Ultimate auto-completion system for Vim
-"Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 " Syntax checking hacks for vim
 Plug 'ctrlpvim/ctrlp.vim'
 " Fuzzy file, buffer, mru, tag, etc finder
@@ -37,6 +37,10 @@ Plug 'junegunn/goyo.vim'
 Plug 'altercation/vim-colors-solarized'
 " precision colorscheme for the vim text editor
 
+" markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 " haskell
 Plug 'neovimhaskell/haskell-vim'
 " Syntax Highlighting and Indentation for Haskell and Cabal
@@ -55,6 +59,7 @@ Plug 'nbouscal/vim-stylish-haskell'
 " javascript
 Plug 'pangloss/vim-javascript'
 
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 filetype plugin indent on    " required
@@ -81,9 +86,15 @@ au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
 au FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
 au FileType haskell nnoremap <buffer> <silent> <F3> :GhcModTypeInsert<CR>
 au FileType haskell nnoremap <buffer> <silent> <F4> :HdevtoolsInfo<CR>
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_auto_loc_list=1
 let g:syntastic_haskell_checkers = ["hdevtools", "hlint"]
-let g:syntastic_javascript_checkers = ["jshint"]
+let g:syntastic_javascript_checkers = ['standard']
 let g:ctrlp_extensions = ['tag']
 "let g:airline_theme='solarized'
 "let g:airline_powerline_fonts=1
