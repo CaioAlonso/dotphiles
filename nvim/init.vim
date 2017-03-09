@@ -65,9 +65,9 @@ call plug#end()
 filetype plugin indent on    " required
 let g:haddock_browser = "chromium"
 set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set number
 set list
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:␣
@@ -94,8 +94,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_auto_loc_list=1
 let g:syntastic_haskell_checkers = ["hdevtools", "hlint"]
-let g:syntastic_javascript_checkers = ['standard']
 let g:ctrlp_extensions = ['tag']
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 "let g:airline_theme='solarized'
 "let g:airline_powerline_fonts=1
 

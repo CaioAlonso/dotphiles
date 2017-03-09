@@ -35,5 +35,6 @@ mutt/smime/*
 mutt/certificates
 nvim/plugged
 nvim/.netrwhist
+nvim/autoload/plug.vim.old
 task/task/*.data
 fish/fish_history
