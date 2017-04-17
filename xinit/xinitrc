@@ -10,9 +10,13 @@ xinput --set-prop "Razer Razer DeathAdder" "libinput Accel Speed" -0.9
 
 RANDOM_WALLPAPER="$(ls -d1 ~/.wallpaper/*.jpg ~/.wallpaper/*.png | shuf -n1)"
 RESOLUTION="$(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/')"
-echo $RANDOM_WALLPAPER
 rm /tmp/tempwall.jpg
-convert "$RANDOM_WALLPAPER" -resize "$RESOLUTION" -gravity center -crop 1440x900+0+0 +repage /tmp/tempwall.jpg
+convert "$RANDOM_WALLPAPER" \
+  -gravity center \
+  -resize "$RESOLUTION^" \
+  -crop "$RESOLUTION+0+0" \
+  +repage \
+  /tmp/tempwall.jpg
 bgs /tmp/tempwall.jpg
 
 export _JAVA_AWT_WM_NONREPARENTING=1
