@@ -1,5 +1,12 @@
 #!/bin/sh
 
+vol=$(amixer get Master |\
+    grep -m 1 % |\
+    awk '{print($6" "$5)}' |\
+    tr --delete '[]' |\
+    tr --delete ' on' |\
+    sed -e 's/[[:space:]]*$//')
+
 if [ hash acpi 2>/dev/null ] && [ $HOSTNAME != 'desktop' ]; then
     battery=$(acpi --battery | grep -i 'discharging')
 
@@ -15,13 +22,6 @@ if [ hash acpi 2>/dev/null ] && [ $HOSTNAME != 'desktop' ]; then
 else
     battery=""
 fi
-
-vol=$(amixer get Master |\
-    grep -m 1 % |\
-    awk '{print($6" "$5)}' |\
-    tr --delete '[]' |\
-    tr --delete ' on' |\
-    sed -e 's/[[:space:]]*$//')
 
 clock=" · $(date +'%d/%m/%y (%a) %R')"
 
