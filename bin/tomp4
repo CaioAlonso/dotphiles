@@ -1,0 +1,6 @@
+#!/bin/sh
+fullfilename=$1
+filename=$(basename "$fullfilename")
+fname="${filename%.*}"
+
+ffmpeg -i "$1" -c:v libx264 -crf 26 -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -profile:v main -pix_fmt yuv420p "$fname.tomp4.mp4"
