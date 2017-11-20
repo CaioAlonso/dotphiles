@@ -2,6 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 call plug#begin()
+Plug 'Valloric/YouCompleteMe'
 Plug 'dbeniamine/vim-mail'
 Plug 'tpope/vim-sensible'
 " sensible.vim: Defaults everyone can agree on
@@ -41,6 +42,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" python
+
 " haskell
 Plug 'neovimhaskell/haskell-vim'
 " Syntax Highlighting and Indentation for Haskell and Cabal
@@ -63,7 +66,6 @@ Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 filetype plugin indent on    " required
-let g:haddock_browser = "chromium"
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -94,6 +96,16 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_auto_loc_list=1
 let g:syntastic_haskell_checkers = ["hdevtools", "hlint"]
+let g:syntastic_python_pylint_post_args = '-j 0'
+
+let g:syntastic_javascript_checkers = ['standard']
+let g:syntastic_javascript_standard_args = ['--fix']
+" enable autoread to reload any files from files when checktime is called and
+" the file is changed
+set autoread
+" add an autocmd after vim started to execute checktime for *.js files on write
+au VimEnter *.js au BufWritePost *.js checktime
+
 let g:ctrlp_extensions = ['tag']
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 "let g:airline_theme='solarized'
@@ -213,3 +225,5 @@ set background=dark
 "let g:neomake_open_list = 1
 
 set relativenumber
+
+
