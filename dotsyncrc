@@ -20,7 +20,7 @@ DOTFILES=.dotfiles
 dotsyncrc
 bin:bin
 fontconfig:.config/fontconfig
-fonts
+fonts:.local/share/fonts
 git/gitconfig
 mksh/mkshrc
 nvim:.config/nvim
