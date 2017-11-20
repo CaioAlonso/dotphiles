@@ -2,9 +2,8 @@
 
 vol=$(amixer get Master |\
     grep -m 1 % |\
-    awk '{print($6" "$5)}' |\
+    awk '{print($4)}' |\
     tr --delete '[]' |\
-    tr --delete ' on' |\
     sed -e 's/[[:space:]]*$//')
 
 if [ hash acpi 2>/dev/null ] && [ $HOSTNAME != 'desktop' ]; then
