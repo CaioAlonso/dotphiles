@@ -25,7 +25,6 @@
     pager = true
     showbranch = auto
     status = auto
-    ui = always
 
 [color "interactive"]
     error = red bold
