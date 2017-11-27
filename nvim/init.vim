@@ -226,4 +226,5 @@ set background=dark
 
 set relativenumber
 
-
+" yank to clipboard
+set clipboard+=unnamedplus
