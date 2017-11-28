@@ -1,0 +1,11 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "before": ["<C-d>"],
+    "after": ["j","j","j","j","j","j","j","j"]
+},
+{
+    "before": ["<C-u>"],
+    "after": ["k","k","k","k","k","k","k","k"]
+}
+]

@@ -1,0 +1,26 @@
+{
+    "editor.fontSize": 12,
+    "editor.fontFamily": "Hasklig",
+    "editor.cursorStyle": "line",
+    "javascript.validate.enable": false,
+    "editor.tabSize": 2,
+    "editor.lineNumbers": "relative",
+    "workbench.activityBar.visible": true,
+    "workbench.sideBar.location": "left",
+    "window.menuBarVisibility": "toggle",
+    "editor.tabCompletion": true,
+    "editor.rulers": [
+        80
+    ],
+    "workbench.startupEditor": "none",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+}

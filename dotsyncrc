@@ -25,6 +25,7 @@ git/gitconfig
 mksh/mkshrc
 nvim:.config/nvim
 tmux/tmux.conf
+vscode/.config/Code/User
 wallpaper:.wallpaper
 xinit/xinitrc
 [endfiles]
