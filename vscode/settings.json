@@ -3,8 +3,8 @@
     "editor.fontFamily": "Hasklig",
     "editor.cursorStyle": "line",
     "javascript.validate.enable": false,
+    "javascript.implicitProjectConfig.checkJs": true,
     "editor.tabSize": 2,
-    "editor.lineNumbers": "relative",
     "workbench.activityBar.visible": true,
     "workbench.sideBar.location": "left",
     "window.menuBarVisibility": "toggle",
@@ -20,7 +20,12 @@
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
-        "suppressUpdateNotice": false,
+        "suppressUpdateNotice": true,
         "suppressWelcomeNotice": true
     },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Hop Light",
+    "python.disablePromptForFeatures": [
+        "pylint"
+    ],
 }
