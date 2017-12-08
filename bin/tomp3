@@ -1,0 +1,6 @@
+#!/bin/sh
+fullfilename=$1
+filename=$(basename "$fullfilename")
+fname="${filename%.*}"
+
+ffmpeg -i "$1" -codec:a libmp3lame -qscale:a 0 "$fname.tomp3.mp3"

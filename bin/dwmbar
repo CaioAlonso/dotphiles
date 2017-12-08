@@ -2,7 +2,7 @@
 
 vol=$(amixer get Master |\
     grep -m 1 % |\
-    awk '{print($4)}' |\
+    awk '{print($5)}' |\
     tr --delete '[]' |\
     sed -e 's/[[:space:]]*$//')
 
