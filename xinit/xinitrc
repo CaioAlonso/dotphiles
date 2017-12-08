@@ -4,7 +4,9 @@ while true; do
     sleep 10s
 done &
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 xset r rate 200 20
+xset +fp /usr/share/fonts/local/
 xinput --set-prop "Razer Razer DeathAdder" "libinput Accel Speed" -0.9
 
 RANDOM_WALLPAPER="$(ls -d1 ~/.wallpaper/*.jpg ~/.wallpaper/*.png | shuf -n1)"
