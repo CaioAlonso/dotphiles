@@ -17,6 +17,9 @@ Plug 'altercation/vim-colors-solarized'
 
 " Fuzzy file, buffer, mru, tag, etc finder. 
 Plug 'ctrlpvim/ctrlp.vim'
+
+" yapf plugin for Vim
+Plug 'mindriot101/vim-yapf'
 call plug#end()
 
 filetype plugin indent on    " required
@@ -30,6 +33,7 @@ set list
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:␣
 set autoread
 set encoding=utf-8
+let mapleader = ' '
 inoremap <C-k> <Esc>
 command! W :w
 
@@ -47,7 +51,7 @@ set background=dark
 " general styling
 hi ColorColumn ctermbg=0
 set fillchars=vert:\│
-hi VertSplit ctermfg=8 ctermbg=0
+hi VertSplit ctermfg=8 ctermbg=2
 
 " lightline config
 set noshowmode
@@ -57,3 +61,8 @@ let g:lightline = {
 
 " yank to clipboard
 set clipboard+=unnamedplus
+
+" pymode
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>r'
+let g:pymode_folding = 0
