@@ -20,6 +20,7 @@ convert "$RANDOM_WALLPAPER" \
   /tmp/tempwall.jpg
 bgs /tmp/tempwall.jpg
 
+/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 export _JAVA_AWT_WM_NONREPARENTING=1
 redshift &
 exec dwm
