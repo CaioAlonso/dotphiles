@@ -28,6 +28,7 @@ tmux/tmux.conf
 vscode/.config/Code/User
 wallpaper:.wallpaper
 xinit/xinitrc
+zsh/zshrc
 [endfiles]
 
 # Hosts to sync

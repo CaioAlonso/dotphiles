@@ -1,0 +1,26 @@
+PATH=$HOME/bin:$PATH
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# most of promp stuff sits at man zshmisc
+# keep doing source ~/.zshrc to see changes
+# can we expand this to make it easier to read?
+# do we need to use a % sign for unpriviledged prompts?
+# why did UNIX use $ and now zsh uses %?
+# colors: https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+PROMPT='
+%F{white}%B%n%b@%m %B%/%b
+%B%F{green}%#%f%b '
+RPROMPT='%F{4}%?, %*%f'
+
+alias ls='ls --color -F'
+alias la='ls -la'
+alias lat='la -t'
+alias git=hub
+alias ga='git add'
+alias gc='git commit'
+alias gs='git status'
+alias vim=nvim
+alias servidor='mosh --ssh="ssh -p 26" caioalonso'
+alias update='sudo pacman -Syu'
+
+eval "$(direnv hook zsh)"
