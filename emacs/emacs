@@ -27,12 +27,14 @@
 (use-package solarized-theme)
 (use-package evil)
 (use-package magit)
+(use-package evil-magit)
 
 (load-theme 'solarized-dark t)
 (set-frame-font "Inconsolata-10" nil t)
 
 (require 'evil)
 (evil-mode 1)
+(require 'evil-magit)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
