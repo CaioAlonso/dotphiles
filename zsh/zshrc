@@ -10,8 +10,20 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 PROMPT='
 %F{white}%B%n%b@%m %B%/%b
 %B%F{green}%#%f%b '
-RPROMPT='%F{4}%?, %*%f'
 
+export EDITOR=emacs
+export VISUAL=emacs
+
+# url-quote-magic module that automatically escapes URL characters
+# https://github.com/johan/zsh/blob/master/Functions/Zle/url-quote-magic
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
+# As of zsh-5.1, the following may also be necessary in order to apply
+# quoting to copy-pasted URLs:
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
+
+alias l='ls'
 alias ls='ls --color -F'
 alias la='ls -la'
 alias lat='la -t'
