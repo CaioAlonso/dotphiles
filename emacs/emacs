@@ -1,20 +1,36 @@
+;; start maximized
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;; hide emacs interface
+(menu-bar-mode 0)
+(tool-bar-mode 0)
+(scroll-bar-mode -1)
+(setq inhibit-startup-message t)
+
+;; fix for evil C-u
+(setq evil-want-C-u-scroll t)
+
+;; sets the repository url
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 
+;; initializes installed packages
 (package-initialize)
 
+;; installs use-package in case if it doesn't exist
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-
 (require 'use-package)
 (setq use-package-always-ensure t)
-
+(use-package solarized-theme)
 (use-package evil)
 (use-package magit)
 
-(setq evil-want-C-u-scroll t)
+(load-theme 'solarized-dark t)
+(set-frame-font "Inconsolata-10" nil t)
+
 (require 'evil)
 (evil-mode 1)
 
@@ -23,6 +39,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(package-selected-packages (quote (magit evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -30,3 +49,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
