@@ -18,6 +18,7 @@ DOTFILES=.dotfiles
 [files]
 # Uncomment examples below
 dotsyncrc
+emacs/emacs
 bin:bin
 fontconfig:.config/fontconfig
 fonts:.local/share/fonts
