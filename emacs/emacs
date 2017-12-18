@@ -6,6 +6,8 @@
 (tool-bar-mode 0)
 (scroll-bar-mode -1)
 (setq inhibit-startup-message t)
+(global-hl-line-mode +1)
+(global-linum-mode t)
 
 ;; fix for evil C-u
 (setq evil-want-C-u-scroll t)
@@ -24,17 +26,33 @@
   (package-install 'use-package))
 (require 'use-package)
 (setq use-package-always-ensure t)
+(use-package helm)
 (use-package solarized-theme)
 (use-package evil)
 (use-package magit)
 (use-package evil-magit)
+(use-package evil-leader)
+(use-package linum-relative)
+
+(require 'helm-config)
 
 (load-theme 'solarized-dark t)
 (set-frame-font "Inconsolata-10" nil t)
 
+(require 'evil-leader)
+(global-evil-leader-mode)
+(evil-leader/set-leader "<SPC>")
+(evil-leader/set-key
+  "g s" 'magit-status
+  "f f" 'helm-find-files
+  )
+
 (require 'evil)
 (evil-mode 1)
 (require 'evil-magit)
+
+(require 'linum-relative)
+(linum-on)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
