@@ -11,8 +11,8 @@ PROMPT='
 %F{white}%B%n%b@%m %B%/%b
 %B%F{green}%#%f%b '
 
-export EDITOR=emacs
-export VISUAL=emacs
+export EDITOR=vim
+export VISUAL=vim
 
 # url-quote-magic module that automatically escapes URL characters
 # https://github.com/johan/zsh/blob/master/Functions/Zle/url-quote-magic
@@ -30,6 +30,7 @@ alias lat='la -t'
 alias git=hub
 alias ga='git add'
 alias gc='git commit'
+alias gd='git diff'
 alias gs='git status'
 alias vim=nvim
 alias servidor='mosh --ssh="ssh -p 26" caioalonso'
