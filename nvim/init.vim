@@ -36,6 +36,7 @@ set encoding=utf-8
 let mapleader = ' '
 inoremap <C-k> <Esc>
 command! W :w
+map <leader>o o<ESC>
 
 " enable autoread to reload any files from files when checktime is called and
 " the file is changed
@@ -53,6 +54,13 @@ hi ColorColumn ctermbg=0
 set fillchars=vert:\│
 hi VertSplit ctermfg=8 ctermbg=2
 
+" highlight cursor line
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END<Paste>
+
 " lightline config
 set noshowmode
 let g:lightline = {
@@ -63,6 +71,7 @@ let g:lightline = {
 set clipboard+=unnamedplus
 
 " pymode
+let g:pymode_python = 'python3'
 let g:pymode_run = 1
 let g:pymode_run_bind = '<leader>r'
 let g:pymode_folding = 0
