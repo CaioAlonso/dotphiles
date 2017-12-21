@@ -7,10 +7,10 @@ call plug#begin()
 Plug 'itchyny/lightline.vim'
 
 " A code-completion engine for Vim
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 
 " Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box. 
-Plug 'python-mode/python-mode'
+"Plug 'python-mode/python-mode'
 
 " precision colorscheme for the vim text editor
 Plug 'altercation/vim-colors-solarized'
@@ -20,6 +20,12 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 " yapf plugin for Vim
 Plug 'mindriot101/vim-yapf'
+
+" An asynchronous markdown preview plugin for Vim and Neovim
+Plug 'euclio/vim-markdown-composer'
+
+" An alternative sudo.vim for Vim and Neovim
+Plug 'lambdalisue/suda.vim'
 call plug#end()
 
 filetype plugin indent on    " required
@@ -75,3 +81,6 @@ let g:pymode_python = 'python3'
 let g:pymode_run = 1
 let g:pymode_run_bind = '<leader>r'
 let g:pymode_folding = 0
+
+" sudo save
+" cnoremap sudosave w !sudo tee %
