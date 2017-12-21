@@ -1,4 +1,12 @@
-PATH=$HOME/bin:$PATH
+# autocompletion by zsh-completions (installed via pacaur)
+fpath=(
+  /usr/share/zsh/site-functions
+  $fpath
+)
+# had to include this
+autoload -Uz compinit
+compinit
+
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # most of promp stuff sits at man zshmisc
@@ -23,6 +31,7 @@ zle -N self-insert url-quote-magic
 autoload -Uz bracketed-paste-magic
 zle -N bracketed-paste bracketed-paste-magic
 
+alias dutotal='du -cksh'
 alias l='ls'
 alias ls='ls --color -F'
 alias la='ls -la'
@@ -53,4 +62,9 @@ source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-${${DISPLAY:t}:-$VENDOR-$OSTYPE}
 [[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-search
 [[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char
 
+# search history with up and down
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
 eval "$(direnv hook zsh)"
+
