@@ -1,3 +1,7 @@
+export HISTFILE="$HOME/.zhistory"
+export HISTSIZE=65535
+export SAVEHIST=65535
+
 # autocompletion by zsh-completions (installed via pacaur)
 fpath=(
   /usr/share/zsh/site-functions
@@ -36,7 +40,6 @@ alias l='ls'
 alias ls='ls --color -F'
 alias la='ls -la'
 alias lat='la -t'
-alias git=hub
 alias ga='git add'
 alias gc='git commit'
 alias gd='git diff'
@@ -63,8 +66,11 @@ source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-${${DISPLAY:t}:-$VENDOR-$OSTYPE}
 [[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char
 
 # search history with up and down
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey '^[[A' history-beginning-search-backward-end
+bindkey '^[[B' history-beginning-search-forward-end
 
 eval "$(direnv hook zsh)"
 
