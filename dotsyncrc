@@ -24,6 +24,7 @@ fontconfig:.config/fontconfig
 fonts:.local/share/fonts
 git/gitconfig
 mksh/mkshrc
+mpv:.config/mpv
 nvim:.config/nvim
 tmux/tmux.conf
 vscode/.config/Code/User
