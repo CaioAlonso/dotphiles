@@ -30,6 +30,7 @@ tmux/tmux.conf
 vscode/.config/Code/User
 wallpaper:.wallpaper
 xinit/xinitrc
+xinit/Xresources
 zsh/zshrc
 [endfiles]
 
