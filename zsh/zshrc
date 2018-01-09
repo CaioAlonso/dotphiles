@@ -1,4 +1,4 @@
-PATH=/home/caio/.gem/ruby/2.4.0/bin:$PATH
+export TERM="xterm-256color"
 export HISTFILE="$HOME/.zhistory"
 export HISTSIZE=65535
 export SAVEHIST=65535
@@ -15,7 +15,7 @@ compinit
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # fix for rustfmt
-export LD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH="$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH"
 
 # most of promp stuff sits at man zshmisc
 # keep doing source ~/.zshrc to see changes
@@ -49,6 +49,7 @@ alias gc='git commit'
 alias gd='git diff'
 alias gs='git status'
 alias tmux='TERM=xterm-256color tmux'
+alias ta='tmux attach'
 alias vim=nvim
 alias servidor='mosh --ssh="ssh -p 26" caioalonso'
 alias update='sudo pacman -Syu'
@@ -78,7 +79,6 @@ bindkey '^[[A' history-beginning-search-backward-end
 bindkey '^[[B' history-beginning-search-forward-end
 
 eval "$(direnv hook zsh)"
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
