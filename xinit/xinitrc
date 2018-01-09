@@ -7,7 +7,7 @@ source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 xset r rate 200 20
 xset +fp /usr/share/fonts/local/
-xinput --set-prop "Razer Razer DeathAdder" "libinput Accel Speed" -0.9
+setxkbmap br
 
 RANDOM_WALLPAPER="$(ls -d1 ~/.wallpaper/*.jpg ~/.wallpaper/*.png | shuf -n1)"
 RESOLUTION="$(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/')"
@@ -23,4 +23,5 @@ bgs /tmp/tempwall.jpg
 /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 export _JAVA_AWT_WM_NONREPARENTING=1
 redshift &
+urxvtd -q -f -o
 exec dwm
