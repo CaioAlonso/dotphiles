@@ -20,6 +20,7 @@ DOTFILES=.dotfiles
 dotsyncrc
 emacs/emacs
 bin:bin
+fish:.config/fish
 fontconfig:.config/fontconfig
 fonts:.local/share/fonts
 git/gitconfig
