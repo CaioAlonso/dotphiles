@@ -9,8 +9,8 @@
 
 # Global Config
 [user]
-    name = "Caio Alonso"
-    email = "caio@caioalonso.com"
+	name = Caio Alonso
+	email = caio@caioalonso.com
     #signingkey = **Your GPG ID**
 
 [branch "master"]
@@ -116,3 +116,8 @@
     insteadof = github:
 [color]
 	ui = auto
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

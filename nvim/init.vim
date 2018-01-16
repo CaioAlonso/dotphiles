@@ -75,7 +75,7 @@ map <leader>o o<ESC>
 " the file is changed
 set autoread
 let g:ctrlp_extensions = ['tag']
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+let g:ctrlp_user_command = ['.git', 'cd %s; git ls-files -co --exclude-standard']
 
 " solarized
 syntax on

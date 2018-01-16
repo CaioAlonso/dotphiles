@@ -5,14 +5,10 @@ URxvt.scrollBar: false
 ! URxvt.font: xft:uushi:pixelsize=10:antialias=false:hinting=true
 
 ! TTF Fonts
-!URxvt.font: xft:fira mono:style=Medium:pixelsize=9
-!URxvt.boldFont: xft:fira mono:style=Medium:pixelsize=9
-! URxvt.font: xft:Droid Sans Mono:size=8
-! URxvt.boldFont: xft:Droid Sans Mono:size=8
-URxvt.font: xft:Inconsolata:style=Regular:pixelsize=14:antialias=false
-URxvt.boldFont: xft:Inconsolata:style=Bold:pixelsize=14:antialias=false
-! URxvt.font: xft:Source Code Pro:style=Regular:size=8
-! URxvt.boldFont: xft:Source Code Pro:style=Regular:size=8
+URxvt.font:             xft:inconsolata:pixelsize=14:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=14:antialias=true,hinting=true
+URxvt.boldFont:         xft:inconsolata:pixelsize=14:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=14:antialias=true,hinting=true
+URxvt.italicFont:       xft:inconsolata:pixelsize=14:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=14:antialias=true,hinting=true
+URxvt.bolditalicFont: xft:inconsolata:pixelsize=14:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=14:antialias=true,hinting=true
 URxvt.letterSpace:   -1
 
 ! URxvt.font: xft:Inconsolata:style=Medium:size=8
