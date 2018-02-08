@@ -7,7 +7,7 @@ source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 xset r rate 200 20
 xset +fp /usr/share/fonts/local/
-setxkbmap br
+setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll -model pc105  -layout us,us -variant ,intl
 
 RANDOM_WALLPAPER="$(ls -d1 ~/.wallpaper/*.jpg ~/.wallpaper/*.png | shuf -n1)"
 RESOLUTION="$(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/')"
