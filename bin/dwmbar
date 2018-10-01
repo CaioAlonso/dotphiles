@@ -1,10 +1,13 @@
 #!/bin/sh
 
+layout="$(xkblayout-state print %s)"
+
 vol=$(amixer get Master |\
     grep -m 1 % |\
-    awk '{print($5)}' |\
+    awk '{print($4)}' |\
     tr --delete '[]' |\
     sed -e 's/[[:space:]]*$//')
+vol=" · $vol"
 
 if [ hash acpi 2>/dev/null ] && [ $HOSTNAME != 'desktop' ]; then
     battery=$(acpi --battery | grep -i 'discharging')
@@ -24,5 +27,5 @@ fi
 
 clock=" · $(date +'%d/%m/%y (%a) %R')"
 
-status="$vol$battery$clock"
+status="$layout$vol$battery$clock"
 xsetroot -name "$status";
