@@ -1,6 +1,6 @@
 #!/bin/sh
 
-layout="$(xkblayout-state print %s)"
+layout=" $(xkblayout-state print %s)"
 
 vol=$(amixer get Master |\
     grep -m 1 % |\
