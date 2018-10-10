@@ -1,7 +1,8 @@
+export TERMINAL="alacritty"
 export TERM="xterm-256color"
 export HISTFILE="$HOME/.zhistory"
-export HISTSIZE=65535
-export SAVEHIST=65535
+export HISTSIZE=9999999999
+export SAVEHIST=$HISTSIZE
 
 # autocompletion by zsh-completions (installed via pacaur)
 fpath=(
@@ -14,8 +15,8 @@ compinit
 
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# fix for rustfmt
-export LD_LIBRARY_PATH="$(rustc --print sysroot)/lib:$LD_LIBRARY_PATH"
+# cd just by directory name
+setopt autocd
 
 # most of promp stuff sits at man zshmisc
 # keep doing source ~/.zshrc to see changes
@@ -39,20 +40,26 @@ zle -N self-insert url-quote-magic
 autoload -Uz bracketed-paste-magic
 zle -N bracketed-paste bracketed-paste-magic
 
-alias dutotal='du -cksh'
-alias l='ls'
-alias ls='ls --color -F'
-alias la='ls -la'
-alias lat='la -t'
+alias l='ls --literal --color=auto --group-directories-first'
+alias la='l -l --human-readable --all'
+
+alias g='git'
+alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
+alias gcm='git commit -m'
 alias gd='git diff'
-alias gs='git status'
-alias tmux='TERM=xterm-256color tmux'
-alias ta='tmux attach'
-alias vim=nvim
+
+alias vim='nvim'
 alias servidor='mosh --ssh="ssh -p 26" caioalonso'
 alias update='sudo pacman -Syu'
+alias tmux='tmux -2'
+alias ta='tmux attach'
+alias doch='sudo mksh -c "$(fc -ln -1)"'
+alias mkd='mkdir -pv'
+
+alias xi='sudo xbps-install'
+alias xq='xbps-query'
 
 # fixes keybindings
 # will launch a config wizard the first time
@@ -77,8 +84,6 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey '^[[A' history-beginning-search-backward-end
 bindkey '^[[B' history-beginning-search-forward-end
-
-eval "$(direnv hook zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
