@@ -33,6 +33,7 @@ wallpaper:.wallpaper
 xinit/xinitrc
 xinit/Xresources
 zsh/zshrc
+bash/bashrc
 [endfiles]
 
 # Hosts to sync
