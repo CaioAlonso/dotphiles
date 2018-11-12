@@ -1,5 +1,5 @@
 export TERM=xterm-256color
-PS1='\e[1m\u\e[0m@\h \e[1m\w\e[0m\n\r\e[32m$\e[0m '
+PS1='\r\n\e[1m\u\e[0m@\h \e[1m\w\e[0m\n\r\e[32m$\e[0m '
 
 alias l='ls --literal --color=auto --group-directories-first'
 alias la='l -l --human-readable --all'
@@ -15,3 +15,6 @@ alias p='sudo pacaur'
 alias tmux='tmux -2'
 alias ta='tmux attach'
 alias mkd='mkdir -pv'
+
+# cd by directory name
+shopt -s autocd
