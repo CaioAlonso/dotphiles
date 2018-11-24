@@ -1,1 +1,0 @@
-/home/caio/.config/fisherman/simple/functions/fish_prompt.fish
