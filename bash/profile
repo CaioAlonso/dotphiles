@@ -1,6 +1,6 @@
-PATH=~/bin:$PATH
-export EDITOR=nvim
-export VISUAL=nvim
+PATH=~/bin:$PATH:/usr/local/go/bin
+export EDITOR=vim
+export VISUAL=vim
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 	startx
