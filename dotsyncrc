@@ -17,6 +17,8 @@ DOTFILES=.dotfiles
 #
 [files]
 # Uncomment examples below
+bash/bashrc
+bash/profile
 i3:.config/i3
 dotsyncrc
 emacs/emacs
@@ -29,14 +31,13 @@ mksh/mkshrc
 mpv:.config/mpv
 nvim:.config/nvim
 polybar:.config/polybar
+redshift/redshift.conf:.config/redshift.conf
 tmux/tmux.conf
 vscode/.config/Code/User
 wallpaper:.wallpaper
 xinit/xinitrc
 xinit/Xresources
 zsh/zshrc
-bash/bashrc
-bash/profile
 [endfiles]
 
 # Hosts to sync
