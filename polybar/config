@@ -51,7 +51,7 @@ font-4 = Font Awesome 5 Free:style=Solid:pixelsize=7; 2
 
 modules-left = i3
 modules-center = xwindow
-modules-right = volume gap shipping_forecast gmail filesystem cpu temperature wlan eth battery date xkeyboard gap
+modules-right = eth volume filesystem cpu memory temperature battery date xkeyboard 
 
 tray-position = right
 tray-padding = 2
@@ -102,7 +102,7 @@ wrapping-scroll = false
 ws-icon-0 = 1: shell;%{T5}%{T-}
 ws-icon-1 = 2: www;
 ws-icon-2 = 3: chat;
-ws-icon-3 = 4: music;
+ws-icon-3 = 4: email;
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
@@ -173,10 +173,11 @@ type = internal/network
 interface = enp2s0
 interval = 3.0
 
-; format-connected-underline = #55aa55
-; format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-inverse}
-label-connected = %local_ip%
+;format-connected-underline = #55aa55
+;format-connected-prefix = " "
+format-connected-prefix=" "
+format-connected-prefix-foreground=${colors.foreground-prefix}
+label-connected = %local_ip%  %upspeed%  %downspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -251,6 +252,8 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
+hwmon-path=/sys/class/hwmon/hwmon0/temp1_input
+
 format-prefix = " "
 format-warn-prefix = " "
 format-prefix-foreground = ${colors.foreground-prefix}
@@ -273,5 +276,6 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
+enable-ipc = true
 
 ; vim:ft=dosini
