@@ -17,6 +17,7 @@ DOTFILES=.dotfiles
 #
 [files]
 # Uncomment examples below
+alacritty:.config/alacritty
 bash/bashrc
 bash/profile
 i3:.config/i3
