@@ -1,0 +1,28 @@
+USER=$(id -un)
+HOST=$(hostname)
+BOLD=$(tput bold)
+GREEN=$(tput setaf 2)
+NORMAL=$(tput sgr0)
+
+PS1=$BOLD$USER$NORMAL'@'$HOST' '$PWD'
+'$GREEN'$ '$NORMAL
+
+HISTFILE=~/.mksh_history
+HISTSIZE=16383
+
+alias l='ls --literal --color=auto --group-directories-first'
+alias la='l -l --human-readable --all'
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gd='git diff'
+alias p='yay'
+alias tmux='tmux -2'
+alias ta='tmux attach'
+alias mkd='mkdir -pv'
+alias mutt='neomutt'
+alias xi='sudo xbps-install'
+alias xs='xbps-query --repository -s'
+alias xr='sudo xbps-remove'
