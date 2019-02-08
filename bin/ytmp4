@@ -1,0 +1,5 @@
+#!/bin/sh
+FILENAME=$(youtube-dl --get-filename $1)
+echo $FILENAME
+youtube-dl -o "/tmp/$FILENAME" $1
+tomp4 "/tmp/$FILENAME"
