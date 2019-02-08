@@ -131,8 +131,6 @@ set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9: www"
 
-assign [class="Chromium"] $workspace2
-
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
