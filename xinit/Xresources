@@ -5,11 +5,9 @@ URxvt.scrollBar: false
 ! URxvt.font: xft:uushi:pixelsize=10:antialias=false:hinting=true
 
 ! TTF Fonts
-URxvt.font:             xft:inconsolata:pixelsize=12:antialias=false:hinting=false, xft:dejavu sans mono:pixelsize=12:antialias=false,hinting=false
-URxvt.boldFont:         xft:inconsolata:pixelsize=12:antialias=false:hinting=false, xft:dejavu sans mono:pixelsize=12:antialias=false,hinting=false
-URxvt.italicFont:       xft:inconsolata:pixelsize=12:antialias=false:hinting=false, xft:dejavu sans mono:pixelsize=12:antialias=false,hinting=false
-URxvt.bolditalicFont: xft:inconsolata:pixelsize=12:antialias=false:hinting=false, xft:dejavu sans mono:pixelsize=12:antialias=false,hinting=false
-URxvt.letterSpace:   -1
+URxvt*font: -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+URxvt*boldFont: -*-terminus-bold-*-*-*-12-*-*-*-*-*-*-*
+URxvt.letterSpace:0
 
 ! URxvt.font: xft:Inconsolata:style=Medium:size=8
 ! URxvt.boldFont: xft:Inconsolata:style=Medium:size=8

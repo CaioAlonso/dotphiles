@@ -23,5 +23,6 @@ setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll -model pc105  -
 #/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 #export _JAVA_AWT_WM_NONREPARENTING=1
 redshift &
-#urxvtd -q -f -o
+urxvtd -q -f -o
+kbdd
 exec i3
