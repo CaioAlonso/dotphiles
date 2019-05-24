@@ -57,7 +57,7 @@ bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+p exec dmenu_run
-bindsym $mod+p exec dmenu_run -i -fn 'Fira Mono Medium:pixelsize=12' -nb "$dmenu_bg" -nf "$dmenu_fg" -sf "$dmenu_focus_fg" -sb "$dmenu_focus_bg"
+bindsym $mod+p exec dmenu_run -i -fn 'Metis:pixelsize=12' -nb "$dmenu_bg" -nf "$dmenu_fg" -sf "$dmenu_focus_fg" -sb "$dmenu_focus_bg"
 bindsym $mod+Shift+q exec lock.sh -l blur
 bindsym $mod+Shift+i exec type.sh
 
@@ -65,6 +65,8 @@ bindsym $mod+Shift+i exec type.sh
 bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioRaiseVolume exec amixer sset Master 10%+
 bindsym XF86AudioLowerVolume exec amixer sset Master 10%-
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
